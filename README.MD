@@ -7,6 +7,8 @@ _composer require paytech/paytech-commerce_
 
 
 ####2-Activer le module
-_php bin/magento module:enable Paytech_PaytechCommerce_
-_php bin/magento setup:upgrade_
+_php bin/magento module:enable Paytech_PaytechCommerce --clear-static-content_
 
+_php bin/magento setup:di:compile_
+
+_php bin/magento setup:upgrade_
