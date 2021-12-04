@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <paytechcommerce>
+                <active>1</active>
+                <model>Paytech\PaytechCommerce\Model\Payment\PaytechCommerce</model>
+                <order_status>pending</order_status>
+                <title>PAYTECH PAY</title>
+                <description>PAYTECH, Paiement rapide et sécurisé</description>
+                <allowspecific>0</allowspecific>
+                <environement_api>test</environement_api>
+            </paytechcommerce>
+        </payment>
+    </default>
+</config>

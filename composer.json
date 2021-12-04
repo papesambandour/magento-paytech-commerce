@@ -1,0 +1,29 @@
+{
+    "name": "paytech/paytech-commerce",
+    "description": "API de paiement en ligne",
+    "version": "1.0.0",
+    "type": "metapackage",
+    "require": {
+        "php": ">=5.5",
+        "another-vendor/package": "1.*"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Paytech\\PaytechCommerce\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Intech Group",
+            "email": "contact@intech.sn",
+            "homepage": "https://intech.sn"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://github.com/papesambandour/magento-paytech-commerce"
+        }
+    ]
+}
