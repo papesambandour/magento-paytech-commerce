@@ -27,7 +27,7 @@
     ],
     "repositories": [
         {
-            "type": "composer",
+            "type": "vcs",
             "url": "https://packagist.org/packages/paytech/paytech-commerce"
         }
     ],
