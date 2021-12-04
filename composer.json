@@ -4,8 +4,7 @@
     "version": "1.0.0",
     "type": "metapackage",
     "require": {
-        "php": ">=5.5",
-        "another-vendor/package": "1.*"
+        "php": ">=5.5"
     },
     "autoload": {
         "files": [ "registration.php" ],
