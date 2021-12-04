@@ -3,6 +3,8 @@
     "description": "API de paiement en ligne",
     "version": "1.0.0",
     "type": "metapackage",
+    "homepage": "https://paytech.sn",
+    "minimum-stability": "stable",
     "require": {
         "php": ">=5.5"
     },
