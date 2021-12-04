@@ -2,7 +2,7 @@
     "name": "paytech/paytech-commerce",
     "description": "API de paiement en ligne",
     "version": "1.0.0",
-    "type": "metapackage",
+    "type": "magento2-modul",
     "homepage": "https://paytech.sn",
     "minimum-stability": "stable",
     "require": {
