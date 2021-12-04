@@ -18,6 +18,10 @@
             "name": "Intech Group",
             "email": "contact@intech.sn",
             "homepage": "https://intech.sn"
+        },{
+            "name": "Pape Samba NDOUR",
+            "email": "papesambandour@hotmail.com",
+            "homepage": "https://www.linkedin.com/in/pape-samba-ndour-092666145"
         }
     ],
     "repositories": [
@@ -25,5 +29,6 @@
             "type": "composer",
             "url": "https://packagist.org/packages/paytech/paytech-commerce"
         }
-    ]
+    ],
+    "license": "MIT"
 }
