@@ -1,21 +1,12 @@
-https://magento.stackexchange.com/questions/293939/custom-payment-gateway-magento-2-3
+#**Paytech Commerce**
 
-https://www.magedelight.com/resources/steps-to-create-custom-payment-method-in-magento-2/
+###Plugin de paiement paytech pour magento
 
-php bin/magento s:up
-php bin/magento s:s:d -f
-php bin/magento c:c
-
-
-DISPLAY METHOD ON FTRONT
-
-https://aureatelabs.com/magento-2/how-to-add-a-custom-payment-method-to-magento-2-checkout/
-
-#REDIRECT EXTERNAL API
-
-https://github.com/Adyen/adyen-magento2/blob/develop/view/frontend/web/js/view/payment/method-renderer/adyen-cc-method.js
+####1-Insatallation
+_composer require paytech/paytech-commerce_
 
 
-#DISABLE CAPCHA
-bin/magento security:recaptcha:disable-for-user-login
-bin/magento security:recaptcha:disable-for-user-forgot-password
+####2-Activer le module
+_php bin/magento module:enable Paytech_PaytechCommerce_
+_php bin/magento setup:upgrade_
+
