@@ -23,7 +23,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://github.com/papesambandour/magento-paytech-commerce"
+            "url": "https://packagist.org/packages/paytech/paytech-commerce"
         }
     ]
 }
