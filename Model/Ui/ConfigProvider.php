@@ -25,8 +25,8 @@ class ConfigProvider implements ConfigProviderInterface
         return [
             'payment' => [
                 self::CODE => [
-                    'display_title' => $this->getDisplayTitle(),
-                    'display_description' => $this->getDisplayDescription()
+                    'title' => $this->getDisplayTitle(),
+                    'description' => $this->getDisplayDescription()
                 ]
             ]
         ];

@@ -51,20 +51,19 @@ define(
             afterPlaceOrder: function () {
                 console.log('orderplaced');
                  window.location.replace(url.build('/paytechcommerce/payment/request'));
-               // window.location.replace('https://paytech.sn/payment/checkout/yr828bjkwphe8v6');
                 console.log('redirected');
-            },/** Returns send check to info */
+            },
 
             getMailingAddress: function() {
                 return window.checkoutConfig.payment.checkmo.mailingAddress;
             },
 
             getDisplayTitle: function() {
-                return window.checkoutConfig.payment.paytechcommerce.display_title;
+                return window.checkoutConfig.payment.paytechcommerce.title;
             },
 
             getDisplayDescription: function() {
-                return window.checkoutConfig.payment.paytechcommerce.display_description;
+                return window.checkoutConfig.payment.paytechcommerce.description;
             }
         });
     }
