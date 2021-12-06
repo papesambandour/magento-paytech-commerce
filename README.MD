@@ -1,4 +1,4 @@
-#**Paytech Commerce**
+#**Paytech Plugin Magento**
 
 ###Plugin de paiement paytech pour magento
 
