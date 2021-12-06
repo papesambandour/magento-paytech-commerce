@@ -1,5 +1,5 @@
 {
-    "name": "paytech/paytech-commerce",
+    "name": "paytech/paytech-magento",
     "description": "API de paiement en ligne",
     "version": "1.0.0",
     "type": "magento2-modul",

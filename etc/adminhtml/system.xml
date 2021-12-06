@@ -4,7 +4,7 @@
             <group id="paytechcommerce" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
                 <label>PAYTECH COMMERCE</label>
                 <field id="active" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-                    <label>Enabled</label>
+                    <label>État</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
