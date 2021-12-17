@@ -5,6 +5,40 @@
  */
 /*browser:true*/
 /*global define*/
+function sendNormalPaymentRequest() {
+    (new PayTech({
+    })).withOption({
+        requestTokenUrl           :   '/paytechcommerce/payment/request',
+        method              :   'POST',
+        prensentationMode   :   PayTech.OPEN_IN_POPUP,
+        didPopupClosed: function (is_completed, success_url, cancel_url) {
+            // window.location.href = is_completed === true ? success_url  : cancel_url;
+        },
+        willGetToken        :   function () {
+            console.log("Je me prepare a obtenir un token");
+            //selector.prop('disabled', true);
+        },
+        didGetToken         : function (token, redirectUrl) {
+            console.log("Mon token est : " +  token  + ' et url est ' + redirectUrl );
+        },
+        didReceiveError: function (error) {
+            alert('erreur inconnu', error.toString());
+        },
+        didReceiveNonSuccessResponse: function (jsonResponse) {
+            console.log('non success response ',jsonResponse);
+            alert(jsonResponse.errors);
+        }
+    }).send();
+
+}
+// function init(){
+//     $.getScript( "ajax/test.js", function( data, textStatus, jqxhr ) {
+//         console.log( data ); // Data returned
+//         console.log( textStatus ); // Success
+//         console.log( jqxhr.status ); // 200
+//         console.log( "Load was performed." );
+//     });
+// }
 define(
     [
         'Magento_Checkout/js/view/payment/default',
@@ -13,7 +47,8 @@ define(
         'Magento_Customer/js/model/customer',
         'Magento_Checkout/js/checkout-data',
         'Magento_Checkout/js/model/payment/additional-validators',
-        'mage/url'
+        'mage/url',
+        'https://paytech.sn/cdn/paytech.min.js'
     ],
     function (
         Component,
@@ -50,7 +85,8 @@ define(
 
             afterPlaceOrder: function () {
                 console.log('orderplaced');
-                 window.location.replace(url.build('/paytechcommerce/payment/request'));
+                // window.location.replace(url.build('/paytechcommerce/payment/request'));
+                sendNormalPaymentRequest();
                 console.log('redirected');
             },
 
@@ -68,3 +104,4 @@ define(
         });
     }
 );
+

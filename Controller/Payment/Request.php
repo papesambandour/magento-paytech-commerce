@@ -27,15 +27,16 @@ class Request extends \Magento\Customer\Controller\AbstractAccount
         $this->checkoutSession = $checkoutSession;
         $this->scopeConfig = $scopeConfig;
         parent::__construct($context);
+        $order = $this->salesOrderFactory->loadByIncrementId($this->checkoutSession->getLastRealOrder()->getIncrementId());
+        $orderDetails = $order->getData();
+        $response = $this->requestPayment($orderDetails);
+        die(json_encode($response,JSON_PRETTY_PRINT));
+        //$this->_redirect($response['redirect_url']);
     }
 
     public function execute()
     {
 
-        $order = $this->salesOrderFactory->loadByIncrementId($this->checkoutSession->getLastRealOrder()->getIncrementId());
-        $orderDetails = $order->getData();
-        $response = $this->requestPayment($orderDetails);
-        $this->_redirect($response['redirect_url']);
     }
     public function requestPayment($orderDetails): array
     {

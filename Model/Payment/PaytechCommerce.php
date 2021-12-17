@@ -12,4 +12,6 @@ class PaytechCommerce extends \Magento\Payment\Model\Method\AbstractMethod
     ) {
         return parent::isAvailable($quote);
     }
+
+
 }
