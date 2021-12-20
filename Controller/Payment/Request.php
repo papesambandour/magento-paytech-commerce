@@ -29,7 +29,7 @@ class Request extends \Magento\Customer\Controller\AbstractAccount
         parent::__construct($context);
         $order = $this->salesOrderFactory->loadByIncrementId($this->checkoutSession->getLastRealOrder()->getIncrementId());
         $orderDetails = $order->getData();
-        $response = $this->requestPayment($orderDetails);
+        $response = $this->requestPayment($orderDetails,$order->getOrderCurrencyCode());
         die(json_encode($response,JSON_PRETTY_PRINT));
         //$this->_redirect($response['redirect_url']);
     }
@@ -38,7 +38,7 @@ class Request extends \Magento\Customer\Controller\AbstractAccount
     {
 
     }
-    public function requestPayment($orderDetails): array
+    public function requestPayment($orderDetails,$currency): array
     {
 
         try {
@@ -59,7 +59,7 @@ class Request extends \Magento\Customer\Controller\AbstractAccount
                 'order_id' => $id
             ])
                 ->setTestMode($environement_api=='test')
-                ->setCurrency($orderDetails['base_currency_code'])
+                ->setCurrency($currency)
                 ->setRefCommand($id . '|'. uniqid())
                 ->setNotificationUrl([
                     'ipn_url' => $ipn . 'paytechcommerce/payment/callback', //only https
